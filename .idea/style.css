@@ -2,3 +2,10 @@ h1 {
     color: blue;
     text-align: center;
 }
+.fancyFont{
+    font-family: "Calibri Light";
+    font-size: 20px;
+    border: aqua;
+    color: blueviolet;
+
+}
