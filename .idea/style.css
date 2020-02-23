@@ -13,3 +13,27 @@ h1 {
     text-align-last: center;
     text-decoration: overline underline;
 }
+#SpecificElement{
+    background-color: cornflowerblue;
+}
+.newStyle{
+    fill-opacity: 77;
+    shape-outside: -moz-repeating-linear-gradient(#38fa67);
+    size: A3;
+    font-size: medium;
+    color: aqua;
+}
+.fontSize30{
+    font-size: 50px;
+}
+#NewSpecific{
+    align-self: baseline;
+    shape-outside: -moz-element(div);
+    color: salmon;
+    background-color: aqua;
+   border-left-width: thin;
+}
+.element{
+    font-size: 130%;
+    font-size: 2em;
+}
