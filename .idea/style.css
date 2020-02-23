@@ -7,5 +7,9 @@ h1 {
     font-size: 20px;
     border: aqua;
     color: blueviolet;
-
+}
+.blink{
+    text-underline: blue;
+    text-align-last: center;
+    text-decoration: overline underline;
 }
