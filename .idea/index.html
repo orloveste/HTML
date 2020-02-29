@@ -10,7 +10,7 @@
 <div id="app">
     <ul>
         <li v-for="product in products">
-            {{ product }}
+            {{ product.quantity }} {{product.name}}
         </li>
     </ul>
 </div>
@@ -19,12 +19,14 @@
     const app = new Vue({
         el: '#app',
         data: {
-            products: [
-                'Boots',
-                'Jaket',
-                'Beer',
-                'Tuica'
-                ]
+            products: []
+        },
+        created(){
+            fetch('https://api.myjson.com/bins/74l63')
+            .then(response => response.json())
+            .then(json =>{
+                this.products = json.prducts
+            })
         }
     })
 </script>
