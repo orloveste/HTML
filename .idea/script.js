@@ -21,3 +21,4 @@ var demo2 = function (a, b) {
 return a+b;
 }
 y.addEventListener("click", demo2)
+//https://www.w3schools.com/js/js_function_parameters.asp
