@@ -1,25 +1,29 @@
+
+Vue.component('todo-item', {
+    props: ['mytytle'],
+    template: "<li>{{mytytle.text}}</li>",
+
+})
+Vue.component('todo-item-2', {
+    props: ['mycars'],
+    template: "<li>{{mycars.text}}</li>",
+})
 var app = new Vue({
     el: '#app',
     data: {
-        myObject: {
-            accountName: '',
-            password: ' ',
-
-        },
+        list:[
+            {id:0, text: 'First tytle'},
+            {id:1, text: 'second tytle'},
+            {id:2, text: 'Therd tytle'},
+            {id:3, text: 'kebap tytle'}
+        ],
         todos: [
-            {textInvalidPass: 'invalid pass'},
-            {textValidPass: 'you are log in'}
+            {id:0, text: 'Rabla'},
+            {id:1, text: 'caruta'},
+            {id:2, text: 'tricicleta'},
+            {id:3, text: 'nemotorizata'}
         ]
-
     },
     methods :{
-        mySpecialFunction : function () {
-           window.alert('you clicked the button'),
-               password = 1234
-
-        },
-        hoverFunction : function () {
-            console.log('over the button')
-        }
     }
 })
