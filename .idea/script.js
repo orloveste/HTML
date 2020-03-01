@@ -4,7 +4,7 @@ Vue.component('todo-item', {
     template: "<li>{{mytytle.text}}</li>",
 
 })
-Vue.component('todo-item-2', {
+Vue.component('todo-item2', {
     props: ['mycars'],
     template: "<li>{{mycars.text}}</li>",
 })
@@ -18,10 +18,10 @@ var app = new Vue({
             {id:3, text: 'kebap tytle'}
         ],
         todos: [
-            {id:0, text: 'Rabla'},
-            {id:1, text: 'caruta'},
-            {id:2, text: 'tricicleta'},
-            {id:3, text: 'nemotorizata'}
+            {id:5, text: 'Rabla'},
+            {id:6, text: 'caruta'},
+            {id:7, text: 'tricicleta'},
+            {id:8, text: 'nemotorizata'}
         ]
     },
     methods :{

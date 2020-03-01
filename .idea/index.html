@@ -10,18 +10,16 @@
 <ol>
   <!-- Create an instance of the todo-item component -->
   <todo-item
-  v-for="item in list"
-  v-bind:mytytle="item"
-  v-bind:key="item.id"
+          v-bind:key="item.id"
+          v-bind:mytytle="item"
+          v-for="item in list"
   ></todo-item>
 
-  <todo-item-2 v-for="todo in todos"
-            v.bind:mycars="todo"
-             v.bind:key="todo.id"
-  ></todo-item-2>
-
-
-
+  <todo-item2
+           v-for="item in todos"
+           v.bind:mycars="todos"
+           v.bind:key="todos.id"
+  ></todo-item2>
 </ol>
 </div>
 </body>
