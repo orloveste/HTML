@@ -8,71 +8,8 @@
 <body>
 
 <div id="app">
-    <ul>
-        <li v-for="product in products">
-            <input type="number" v-model.number="product.quantity">
-            {{product.name}}
-            <span v-if="product.quantity === 0">
-                - OUT OF STOCK
-            </span>
-            <button @click="product.quantity +=1">
-                Add
-            </button>
-        </li>
-    </ul>
-    <H2> Total Inventory: {{totalProducts}}</H2>
+    {{ message }}
 </div>
-<script src="https://unpkg.com/vue"></script>
-<script>
-    const app = new Vue({
-        el: '#app',
-        data: {
-            products: []
-        },
-        computed: {
-          totalProducts(){
-              return this.products.reduce((sum, product)=>{
-                  return sum+product.quantity
-              }, 0)
-          }
-        },
-        created(){
-            fetch('https://api.myjson.com/bins/74l63')
-            .then(response => response.json())
-            .then(json =>{
-                this.products = json.prducts
-            })
-        }
-    })
-</script>
-
-<h1>H1 element</h1>
-
-<p id = "demo"></p>
-<script>
-    document.getElementById("demo").innerHTML ="Hello world!";
-</script>
-
-<h2 class="fancyFont">H2 element</h2>
-<span class="fancyFont blink">random text</span>
-
-<div id="SpecificElement">
-    some text
-</div>
-
-<div class="newStyle"><h3>New Style</h3></div>
-<h3 class="blink fontSize30"> blink h3</h3>
-<span id="NewSpecific" class="fontSize30 newStyle">font 30 newStyle</span>
-<div id="SpecificElement" >
-<span class="fontSize30 newStyle">font 30 newStyle</span>
-</div>
-<div id="NewSpecific">New specific</div>
-<span id="SpecificElement"> specific
-    <datalist class="newStyle">new datalist</datalist>
-</span>
-
-
-<h4 class="element">h4 template</h4>
 
 </body>
 
