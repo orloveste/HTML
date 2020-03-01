@@ -23,8 +23,15 @@
           v-bind:style="messageStyleBlue">
         text secundar
     </span>
+    <br>
+    <span v-if="shouldantAppear">
+            text nu apare
+        </span>
+    <span v-if="shouldAppear">
+        text ce dispare ocazional
+    </span>
 </div>
-//message on text
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

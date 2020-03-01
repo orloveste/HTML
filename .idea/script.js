@@ -5,6 +5,8 @@ var app = new Vue({
         message2: ' second hello',
         message3: ' New generation',
         mesajStyle: 'color: red',
-        messageStyleBlue: 'color: blue'
+        messageStyleBlue: 'color: blue',
+        shouldAppear: true,
+        shouldantAppear: false
     }
 })
