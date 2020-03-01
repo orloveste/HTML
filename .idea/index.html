@@ -8,14 +8,27 @@
 <body>
 
 <div id="app">
-    Create new account:
-    <input v-model="myObject.accountName">
+    Log in form:
     <br>
-  {{myObject}}<br>
-    <input v-model="myObject.name">
-    <input v-model="myObject.surname">
-</div>
+    UserName <input v-model="myObject.accountName">
+    <br>
+    Password <input v-model="myObject.password">
+    <br>
+      User:     {{myObject.accountName}}
+    <br>
+      Pass:     {{myObject.password}}<br>
+    <button v-on:click="mySpecialFunction"
+    v-if: >
+             submit
 
+
+       
+    </button>
+    
+    
+    
+
+</div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
