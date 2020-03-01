@@ -8,8 +8,12 @@
 <body>
 
 <div id="app">
-   <button v-on:click="mySpecialFunction"
-            v-on:mouseover="hoverFunction">tranki da button</button>
+    Create new account:
+    <input v-model="myObject.accountName">
+    <br>
+  {{myObject}}<br>
+    <input v-model="myObject.name">
+    <input v-model="myObject.surname">
 </div>
 
 </body>

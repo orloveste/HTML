@@ -1,6 +1,12 @@
 var app = new Vue({
     el: '#app',
     data: {
+        myObject: {
+            name: ' ',
+            surname: '',
+            accountName: ''
+
+        }
 
     },
     methods :{
