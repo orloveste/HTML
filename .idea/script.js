@@ -1,29 +1,24 @@
 
-Vue.component('todo-item', {
-    props: ['mytytle'],
-    template: "<li>{{mytytle.text}}</li>",
+Vue.component('merdeneaComponent', {
+    props: ['merdenea'],
+    template: '<li>Added merdenea</li>',//numele merdenelei de intrat aici din input
 
-})
-Vue.component('todo-item2', {
-    props: ['mycars'],
-    template: "<li>{{mycars.text}}</li>",
 })
 var app = new Vue({
     el: '#app',
     data: {
-        list:[
-            {id:0, text: 'First tytle'},
-            {id:1, text: 'second tytle'},
-            {id:2, text: 'Therd tytle'},
-            {id:3, text: 'kebap tytle'}
-        ],
-        todos: [
-            {id:5, text: 'Rabla'},
-            {id:6, text: 'caruta'},
-            {id:7, text: 'tricicleta'},
-            {id:8, text: 'nemotorizata'}
-        ]
+        merdenea: {
+            numeMerdenea: ' ',
+        },
+        merdenele: []
     },
     methods :{
+        addMerdenea : function () {
+            this.merdenele.push(
+                {nume: this.merdenea.numeMerdenea},
+
+            );
+            this.merdenea.numeMerdenea='';
+        }
     }
-})
+});

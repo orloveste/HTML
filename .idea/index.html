@@ -7,20 +7,16 @@
 </head>
 <body>
 <div id="app">
-<ol>
-  <!-- Create an instance of the todo-item component -->
-  <todo-item
-          v-bind:key="item.id"
-          v-bind:mytytle="item"
-          v-for="item in list"
-  ></todo-item>
-
-  <todo-item2
-           v-for="item in todos"
-           v.bind:mycars="todos"
-           v.bind:key="todos.id"
-  ></todo-item2>
-</ol>
+{{merdenea}}
+    <br>
+    <input v-model="merdenea.numeMerdenea">
+    <br>
+    <button v-on:click="addMerdenea()">Add Merdenea</button>
+    <br>
+    {{merdenele}}
+    <span v-for="merdenea in merdenele">
+        <merdenea-component v-for="merdenea in merdenele">numeMerdenea</merdenea-component>
+    </span>
 </div>
 </body>
 
