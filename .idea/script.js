@@ -1,20 +1,14 @@
 var app = new Vue({
     el: '#app',
     data: {
-        masini:[
-            {nameCar : 'Dacia'},
-            {nameCar : 'Opel'},
-            {nameCar : 'Fiat'},
-            {nameCar : 'Ford'},
-        ],
-        flowers:[
-            {flowerName: 'Zambila',
-                flowerColor: 'purple'},
-            {flowerName: 'Lily',
-                flowerColor: 'white'},
-            {flowerName: 'Roses',
-                flowerColor: 'red'},
 
-        ]
+    },
+    methods :{
+        mySpecialFunction : function () {
+           window.alert('you clicked the button')
+        },
+        hoverFunction : function () {
+            console.log('over the button')
+        }
     }
 })
