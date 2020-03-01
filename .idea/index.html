@@ -8,10 +8,21 @@
 <body>
 
 <div id="app">
-    <span v-bind:title="message">
-    Hover your mouse over me for a few seconds
-    to see my dynamically bound title!
+    {{ message }}
+    <br>
+
+
+    {{ message3 }}
+    <br>
+    <span v-bind:title="message2"
+        v-bind:style="mesajStyle">
+    Mesajul meu load
   </span>
+    <br>
+    <span v-bind:title="message3"
+          v-bind:style="messageStyleBlue">
+        text secundar
+    </span>
 </div>
 
 </body>
