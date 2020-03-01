@@ -8,28 +8,17 @@
 <body>
 
 <div id="app">
-    {{ message }}
-    <br>
-    {{ message2 }}
-    <br>
-    {{ message3 }}
-    <br>
-    <span v-bind:title="message2"
-        v-bind:style="mesajStyle">
-    Mesajul meu load
-  </span>
-    <br>
-    <span v-bind:title="message3"
-          v-bind:style="messageStyleBlue">
-        text secundar
-    </span>
-    <br>
-    <span v-if="shouldantAppear">
-            text nu apare
-        </span>
-    <span v-if="shouldAppear">
-        text ce dispare ocazional
-    </span>
+    <ol>
+        <li v-for="car in masini">
+            {{car.nameCar}}
+        </li>
+    </ol>
+    <ul>
+        <li v-for="flower in flowers">
+            {{flower.flowerName}} =>
+            {{flower.flowerColor}}
+        </li>
+    </ul>
 </div>
 
 </body>
