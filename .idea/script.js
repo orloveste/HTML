@@ -7,9 +7,14 @@ Vue.component('merdeneaComponent', {
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'new one',
+        message: 'You loaded this page on ' + new Date().toLocaleString(),
+        message2: ' second hello',
+        message3: ' New generation',
+        mesajStyle: 'color: red',
+        messageStyleBlue: 'color: blue',
+        //message: 'new one',
         merdenea: {
-            numeMerdenea: ' ',
+            numeMerdenea: 'facatura',
         },
         merdenele: []
     },
@@ -18,7 +23,7 @@ var app = new Vue({
             this.merdenele.push(
                 {nume: this.merdenea.numeMerdenea},
             );
-            this.merdenea.numeMerdenea='';
+            //this.merdenea.numeMerdenea=''; //reset input
         }
     }
 });

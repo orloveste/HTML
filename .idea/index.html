@@ -12,12 +12,23 @@
     <br>
     <input v-model="merdenea.numeMerdenea">
     <br>
-    <button v-on:click="addMerdenea()">Add Merdenea</button>
+    <button v-on:click="addMerdenea(numeMerdenea)">Add Merdenea</button>
     <br>
     {{merdenele}}
     <span v-for="merdenea in merdenele">
-        <merdenea-component>addMerdenea</merdenea-component>
+        <merdenea-component></merdenea-component>
     </span>
+
+    <span v-bind:title="message2"
+    v-bind:style="mesajStyle">
+        mesajul meu load
+    </span><br>
+    <span v-bind:title="message3"
+          v-bind:style="messageStyleBlue">
+        mesajul secundar
+    </span>
+
+
 </div>
 </body>
 
