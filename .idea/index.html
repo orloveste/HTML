@@ -7,6 +7,7 @@
 </head>
 <body>
 <div id="app">
+    {{message}}<br>
 {{merdenea}}
     <br>
     <input v-model="merdenea.numeMerdenea">
@@ -15,7 +16,7 @@
     <br>
     {{merdenele}}
     <span v-for="merdenea in merdenele">
-        <merdenea-component v-for="merdenea in merdenele">numeMerdenea</merdenea-component>
+        <merdenea-component>addMerdenea</merdenea-component>
     </span>
 </div>
 </body>

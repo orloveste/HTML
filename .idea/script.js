@@ -1,12 +1,13 @@
 
 Vue.component('merdeneaComponent', {
     props: ['merdenea'],
-    template: '<li>Added merdenea</li>',//numele merdenelei de intrat aici din input
+    template: '<li>{{nume}}</li>',//numele merdenelei de intrat aici din input
 
 })
 var app = new Vue({
     el: '#app',
     data: {
+        message: 'new one',
         merdenea: {
             numeMerdenea: ' ',
         },
@@ -16,7 +17,6 @@ var app = new Vue({
         addMerdenea : function () {
             this.merdenele.push(
                 {nume: this.merdenea.numeMerdenea},
-
             );
             this.merdenea.numeMerdenea='';
         }
