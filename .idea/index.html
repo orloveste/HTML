@@ -12,18 +12,14 @@
     <br>
     <input v-model="merdenea.numeMerdenea">
     <br>
-    <button v-on:click="addMerdenea()">Add Merdenea
-        <span v-for="merdenea in merdenele">
-
-        <merdenea-component>
-
-        </merdenea-component>
-        {{merdenea.nume}}<br>
-    </span>
-    </button>
+    <button v-on:click="addMerdenea()">Add Merdenea</button>
     <br>
     {{merdenele}}
+    <span v-for="merdenea in merdenele">
 
+        <merdenea-component v-bind:merdenele="component.merdenea"></merdenea-component>
+        {{merdenea.nume}}<br>
+    </span>
 
 
     <span v-if="seen"
