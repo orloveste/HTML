@@ -2,7 +2,7 @@
 Vue.component('merdeneaComponent', {
     props: ['merdenele'],
     // props: ['merdenea'],
-    template: '<li v-for="merdenea in merdenele">{{merdenea}}</li>',//numele merdenelei de intrat aici din input
+    template: '<li v-bind:nume></li>',//numele merdenelei de intrat aici din input
 })
 
 var app = new Vue({
