@@ -1,6 +1,6 @@
 
 Vue.component('merdeneaComponent', {
-    props: ['merdenea'],
+    props: ['merdenele'],
     template: '<li>add new</li>',//numele merdenelei de intrat aici din input
 })
 var app = new Vue({
@@ -15,7 +15,7 @@ var app = new Vue({
         merdenea: {
             numeMerdenea: 'facatura',
         },
-        merdenele: []
+        merdenele: [msIndexedDB.open(app,indexOfItem)]
     },
     methods :{
         addMerdenea : function () {
