@@ -1,7 +1,8 @@
 
 Vue.component('merdeneaComponent', {
     // props: ['merdenele'],
-    template: '<li>[]</li>',//numele merdenelei de intrat aici din input
+    props: ['merdenea'],
+    template: '<li>add new</li>',//numele merdenelei de intrat aici din input
 })
 var app = new Vue({
     el: '#app',
@@ -22,7 +23,10 @@ var app = new Vue({
             this.merdenele.push(
                 {nume: this.merdenea.numeMerdenea},
             );
-            //this.merdenea.numeMerdenea=''; //reset input
+            // this.merdenea.numeMerdenea=''; //reset input
+        },
+        windowAlert: function () {
+            window.alert('new add prepare')
         }
     }
 });
