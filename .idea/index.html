@@ -15,9 +15,8 @@
     <button v-on:click="addMerdenea()">Add Merdenea</button>
     <br>
     {{merdenele}}
-    <div id="app">{{merdenea}}</div>//automatic call back?
     <span v-for="merdenea in merdenele">
-        <merdenea-component>
+        <merdenea-component v-bind:template>
 
         </merdenea-component>
     </span>
