@@ -17,10 +17,10 @@
     {{merdenele}}
     <span v-for="merdenea in merdenele">
 
-        <merdenea-component>
-
+        <merdenea-component v-bind:merdenea="nume">
+ {{merdenea.nume}}<br>
         </merdenea-component>
-        {{merdenea.nume}}<br>
+
     </span>
 
 

@@ -1,7 +1,7 @@
 
 Vue.component('merdeneaComponent', {
-    props: ['merdenele'],
-    template: '<li>add new</li>',//numele merdenelei de intrat aici din input
+    // props: ['merdenele'],
+    template: '<li>new add</li>',//numele merdenelei de intrat aici din input
 })
 var app = new Vue({
     el: '#app',
