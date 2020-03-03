@@ -27,7 +27,7 @@ var app = new Vue({
         },
     }
 });
-app.merdenele = 'new message'
+app.merdenea = 'new message'
 app.$el.textContent === 'new message'
 Vue.nextTick(function () {
     app.$el.textContent === 'new message'
