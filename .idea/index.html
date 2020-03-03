@@ -16,8 +16,8 @@
     <br>
     {{merdenele}}
     <span v-for="merdenea in merdenele">
-        <merdenea-component v-bind:template>
-
+        <merdenea-component v-bind:addMerdenea="merdenea">
+            {{nume}}
         </merdenea-component>
     </span>
 
