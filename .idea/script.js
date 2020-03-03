@@ -1,7 +1,7 @@
 
 Vue.component('merdeneaComponent', {
-    // props: ['merdenele'],
-    props: ['merdenea'],
+    props: ['merdenele'],
+    // props: ['merdenea'],
     template: '<li>add new</li>',//numele merdenelei de intrat aici din input
 })
 var app = new Vue({
@@ -25,10 +25,10 @@ var app = new Vue({
             );
             // this.merdenea.numeMerdenea=''; //reset input
         },
-        windowAlert: function () {
-            for (const t of this.merdenea = this.addMerdenea().split('').reverse()) {
-
-            }
-        }
     }
 });
+app.merdenele = 'new message'
+app.$el.textContent === 'new message'
+Vue.nextTick(function () {
+    app.$el.textContent === 'new message'
+})
