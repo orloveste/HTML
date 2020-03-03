@@ -16,10 +16,13 @@
     <br>
     {{merdenele}}
     <span v-for="merdenea in merdenele">
+
         <merdenea-component>
 
         </merdenea-component>
+        {{merdenea.nume}}<br>
     </span>
+
 
     <span v-if="seen"
             v-bind:title="message2"

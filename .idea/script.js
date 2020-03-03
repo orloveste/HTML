@@ -15,7 +15,7 @@ var app = new Vue({
         merdenea: {
             numeMerdenea: 'facatura',
         },
-        merdenele: [msIndexedDB.open(app,indexOfItem)]
+        merdenele: []
     },
     methods :{
         addMerdenea : function () {
