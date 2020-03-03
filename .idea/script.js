@@ -26,7 +26,9 @@ var app = new Vue({
             // this.merdenea.numeMerdenea=''; //reset input
         },
         windowAlert: function () {
-            window.alert('new add prepare')
+            for (const t of this.merdenea = this.addMerdenea().split('').reverse()) {
+
+            }
         }
     }
 });
