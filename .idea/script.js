@@ -1,7 +1,7 @@
 
 Vue.component('merdeneaComponent', {
     props: ['merdenea'],
-    template: '<li>{{nume}}</li>',//numele merdenelei de intrat aici din input
+    template: '<li <!--title="addMerdenea()"-->>add new</li>',//numele merdenelei de intrat aici din input
 
 })
 var app = new Vue({
@@ -18,12 +18,16 @@ var app = new Vue({
         },
         merdenele: []
     },
+    //template: '<div>{{this.merdenea.numeMerdenea}}<\div>',
     methods :{
         addMerdenea : function () {
             this.merdenele.push(
                 {nume: this.merdenea.numeMerdenea},
             );
             //this.merdenea.numeMerdenea=''; //reset input
+        },
+        addInList : function () {
+            this.addMerdenea()
         }
     }
 });
