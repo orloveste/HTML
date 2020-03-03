@@ -1,8 +1,21 @@
 
 Vue.component('merdeneaComponent', {
     props: ['merdenea'],
-    template: '<li <!--title="addMerdenea()"-->>add new</li>',//numele merdenelei de intrat aici din input
-
+    template: '<li>{{updateMessage}}</li>',//numele merdenelei de intrat aici din input
+    data: function () {//call back?
+        return{
+            merdenea: 'not updated'
+        }
+    },
+    metthods:{
+        updateMessage: async function () {
+            this.merdenea = 'updated'
+            console.log(this.$el.textContent)
+            await this.$nextTick(function () {
+                console.log(this.$el.textContent)
+            })
+        }
+    }
 })
 var app = new Vue({
     el: '#app',
@@ -12,7 +25,7 @@ var app = new Vue({
         message3: ' New generation',
         mesajStyle: 'color: red',
         messageStyleBlue: 'color: blue',
-        //message: 'new one',
+        message: 'new one',
         merdenea: {
             numeMerdenea: 'facatura',
         },
@@ -26,8 +39,8 @@ var app = new Vue({
             );
             //this.merdenea.numeMerdenea=''; //reset input
         },
-        addInList : function () {
-            this.addMerdenea()
-        }
+        // addInList : function () {
+        //     this.addMerdenea()
+        // }
     }
 });
