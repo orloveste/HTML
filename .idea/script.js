@@ -11,7 +11,7 @@ var app = new Vue({
         message3: ' New generation',
         mesajStyle: 'color: red',
         messageStyleBlue: 'color: blue',
-
+        seen: true,
         merdenea: {
             numeMerdenea: 'facatura',
         },
