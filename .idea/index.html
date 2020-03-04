@@ -7,32 +7,7 @@
 </head>
 <body>
 <div id="app">
-    {{message}}<br>
-{{merdenea}}
-    <br>
-    <input v-model="merdenea.numeMerdenea">
-    <br>
-    <button v-on:click="addMerdenea()">Add Merdenea</button>
-    <br>
-    {{merdenele}}
-    <span v-for="merdenea in merdenele">
-
-        <merdenea-component v-bind:merdenele="merdenea.nume">{{merdenea.nume}}</merdenea-component>
-        {{merdenea.nume}}<br>
-    </span>
-
-
-    <span v-if="seen"
-            v-bind:title="message2"
-    v-bind:style="mesajStyle">
-        mesajul meu load
-    </span><br>
-    <span v-bind:title="message3"
-          v-bind:style="messageStyleBlue">
-        {{message2}}
-    </span>
-
-
+    {{message}}
 </div>
 </body>
 
