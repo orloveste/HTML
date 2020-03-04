@@ -8,18 +8,20 @@
 <body>
 <div id="app">
     {{message}}<br>
-<!--    message it changes in both cases-->
     <br>
     <span v-bind:title="message">
         If you want to see more info about that text,<br>
         just be here! You can link aditional info about your content.<br>
     </span>
-<!--    Conditionals and Loops-->
-    Go visible =>
-    <span v-if="seen">Go visible<br></span>
-    Go INvisible =>
-    <span v-if="unseen">Go INvisible</span>
-
+    Go visible =><span v-if="seen">Go visible<br></span>
+    Go INvisible =><span v-if="unseen">Go INvisible</span>
+<!--    v-for directive can be used for displaying a list of items using the
+data from an Array-->
+    <ol>
+        <li v-for="todo in todos">
+            {{todo.text}}
+        </li>
+    </ol>
 </div>
 
 </body>
