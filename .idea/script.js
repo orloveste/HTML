@@ -22,8 +22,7 @@ var app = new Vue({
             // {text: import()}, SyntaxError: import() requires a specifier
             {text: undefined},
             {text: void this},
-
-
         ]
     }
 });
+app.todos.push({ text: 'New item' })
