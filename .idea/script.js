@@ -1,6 +1,17 @@
+Vue.component('merdeneaComponent', {
+    props: ['merdenele'],
+    // props: ['merdenea'],
+    template: '<li>add new</li>',//numele merdenelei de intrat aici din input
+})
+
 var app = new Vue({
     el: '#app',
     data: {
+        merdenea: {
+            numeMerdenea: 'facatura',
+        },
+        merdenele: [{merdenea: this}],
+
         message: 'You loaded this page on ' + new Date().toLocaleString(),
         seen: true,
         unseen: false,
@@ -23,6 +34,14 @@ var app = new Vue({
             {text: undefined},
             {text: void this},
         ]
+    },
+    methods :{
+        addMerdenea : function () {
+            this.merdenele.push(
+                {nume: this.merdenea.numeMerdenea},
+            );
+            // this.merdenea.numeMerdenea=''; //reset input
+        },
     }
 });
 app.todos.push({ text: 'New item' })

@@ -7,7 +7,19 @@
 </head>
 <body>
 <div id="app">
-    {{message}}<br>
+    <input v-model="merdenea.numeMerdenea">
+    <br>
+    <button v-on:click="addMerdenea()">Add Merdenea</button>
+    <br>
+    {{merdenele}}
+    <span v-for="merdenea in merdenele">
+
+        <merdenea-component v-bind:merdenea="merdenea.nume"></merdenea-component>
+        {{merdenea.nume}}<br>
+    </span>
+
+
+    <br>{{message}}<br>
     <br>
     <span v-bind:title="message">
         If you want to see more info about that text,<br>
