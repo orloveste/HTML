@@ -10,7 +10,7 @@ var app = new Vue({
         merdenea: {
             numeMerdenea: 'facatura',
         },
-        merdenele: [{merdenea: this}],
+        merdenele: [],
 
         message: 'You loaded this page on ' + new Date().toLocaleString(),
         seen: true,
@@ -40,6 +40,9 @@ var app = new Vue({
             this.merdenele.push(
                 {nume: this.merdenea.numeMerdenea},
             );
+            this.template.push(
+                {templateName: this.merdenea.numeMerdenea}
+            )
             // this.merdenea.numeMerdenea=''; //reset input
         },
     }
