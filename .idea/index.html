@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>orloveste</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div id="app">
-    {{message}}
+    {{message}}<br>
+    <br>
+    <span v-bind:title="message">
+        If you want to see more info about that text,<br>
+        just be here! You can link aditional info about your content.
+    </span>
 </div>
 </body>
 
