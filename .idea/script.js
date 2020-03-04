@@ -4,3 +4,4 @@ var app = new Vue({
         message: 'You loaded this page on ' + new Date().toLocaleString(),
     }
 });
+app.message = 'some new message'
