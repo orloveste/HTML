@@ -9,6 +9,9 @@ Vue.component('todo-item',{
 })
 
 var data = {a:1}
+var vm = new Vue({
+    data:data
+})
 
 var app = new Vue({
     el: '#app',
