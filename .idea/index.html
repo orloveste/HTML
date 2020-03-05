@@ -18,11 +18,6 @@
         {{merdenea.nume}}<br>
     </span>
 <!--    Composing with Components-->
-    <app-nav></app-nav>
-    <app-view>
-        <app-sidebar></app-sidebar>
-        <app-content></app-content>
-    </app-view>
     <ol><todo-item
             v-for="item in groceryList"
             v-bind:todo="item"

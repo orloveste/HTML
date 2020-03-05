@@ -8,13 +8,18 @@ Vue.component('todo-item',{
     template: '<li>{{ todo.text }}</li>'
 })
 
+var data = {a:1}
+
 var app = new Vue({
     el: '#app',
+
     data: {
         merdenea: {
             numeMerdenea: 'facatura',
         },
         merdenele: [],
+
+
 
         groceryList:[
             {id:0, text:'Milk'},
