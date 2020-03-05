@@ -15,6 +15,8 @@ var vm = new Vue({
 vm.a == data.a
 vm.a = 2
 data.a // => 2
+data.a = 3
+vm.a // => 3
 
 var app = new Vue({
     el: '#app',
