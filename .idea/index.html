@@ -9,11 +9,12 @@
 <div id="app">
     <input v-model="merdenea.numeMerdenea">
     <br>
-    <button v-on:click="addMerdenea()">Add Merdenea</button>
+    <p>{{message}}</p>
+    <button v-on:click="addMerdenea()"
+            v-on:click="reverseMessage()">Add Merdenea</button>
     <br>
     {{merdenele}}
     <span v-for="merdenea in merdenele">
-
         <merdenea-component></merdenea-component>
         {{merdenea.nume}}<br>
     </span>
