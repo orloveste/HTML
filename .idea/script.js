@@ -4,7 +4,8 @@ Vue.component('merdeneaComponent', {
     template: '<li>add new</li>',//numele merdenelei de intrat aici din input
 })
 Vue.component('todo-item',{
-    template: '<li>This is a todo</li>'
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
 })
 
 var app = new Vue({

@@ -18,7 +18,11 @@
         {{merdenea.nume}}<br>
     </span>
 <!--    Composing with Components-->
-    <ol><todo-item></todo-item></ol>
+    <ol><todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id"
+    ></todo-item></ol>
 <!--    Handling User Input-->
     <p>{{message}}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
