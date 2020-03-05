@@ -16,6 +16,12 @@ var app = new Vue({
         },
         merdenele: [],
 
+        groceryList:[
+            {id:0, text:'Milk'},
+            {id:1, text:'Eggs'},
+            {id:2, text:'Lava cake'}
+        ],
+
         message: 'You loaded this page on ' + new Date().toLocaleString(),
         seen: true,
         unseen: false,
