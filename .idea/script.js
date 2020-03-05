@@ -40,11 +40,11 @@ var app = new Vue({
             this.merdenele.push(
                 {nume: this.merdenea.numeMerdenea},
             );
-            this.template.push(
-                {templateName: this.merdenea.numeMerdenea}
-            )
             // this.merdenea.numeMerdenea=''; //reset input
         },
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
     }
 });
 app.todos.push({ text: 'New item' })
