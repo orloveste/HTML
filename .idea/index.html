@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>orloveste</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
 </head>
+
 <body>
 <div id="app">
     <input v-model="merdenea.numeMerdenea">
@@ -17,7 +19,16 @@
         <merdenea-component></merdenea-component>
         {{merdenea.nume}}<br>
     </span>
-<!--    Composing with Components-->
+    <!--    Counter button click-->
+    <section id="app" class="section container">
+        <h1 class="title">Counter!</h1>
+        <div class="box content has-text-centered">
+            <h2 class="title is-1">{{ count }}</h2>
+<!--            <a class="button is-danger" v-on:click="incrementCounter">Count up</a>-->
+            <a class="button is-danger" @click.prevent="incrementCounter">Count up</a>
+        </div>
+    </section>
+    <!--    Composing with Components-->
     <ol><todo-item
             v-for="item in groceryList"
             v-bind:todo="item"

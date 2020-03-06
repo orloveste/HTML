@@ -27,7 +27,7 @@ var app = new Vue({
         },
         merdenele: [],
 
-
+        count: 0,
 
         groceryList:[
             {id:0, text:'Milk'},
@@ -64,6 +64,9 @@ var app = new Vue({
                 {nume: this.merdenea.numeMerdenea},
             );
             // this.merdenea.numeMerdenea=''; //reset input
+        },
+        incrementCounter: function(){
+            this.count += 1;
         },
         reverseMessage: function () {
             this.message = this.message.split('').reverse().join('')
