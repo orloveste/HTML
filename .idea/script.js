@@ -23,6 +23,7 @@ var app = new Vue({
 
     data: {
         merdenea: {
+            idMerdenea: 0,
             numeMerdenea: 'facatura',
         },
         merdenele: [],
@@ -61,13 +62,14 @@ var app = new Vue({
     methods :{
         addMerdenea : function () {
             this.merdenele.push(
-                {nume: this.merdenea.numeMerdenea},
+                {id: this.merdenea.idMerdenea +=1,
+                nume: this.merdenea.numeMerdenea},
             );
             // this.merdenea.numeMerdenea=''; //reset input
         },
-        incrementCounter: function(){
-            this.count += 1;
-        },
+        // incrementMerdenea: function(){
+        //     this.idMerdenea +=1;
+        // },
         reverseMessage: function () {
             this.message = this.message.split('').reverse().join('')
         }

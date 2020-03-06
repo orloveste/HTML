@@ -11,7 +11,7 @@
     <input v-model="merdenea.numeMerdenea">
     <br>
     <button v-on:click="addMerdenea()"
-            @click.prevent="incrementCounter">Add Merdenea</button>
+            @click.prevent="incrementMerdenea">Add Merdenea</button>
     <br>
     {{merdenele}}
     <span v-for="merdenea in merdenele">
@@ -19,11 +19,6 @@
         <merdenea-component></merdenea-component>
         {{merdenea.nume}}<br>
     </span>
-    <!--    Counter button click-->
-    <h4 class="title">Counter!</h4>
-    <h2 class="title is-1">{{ count }}</h2>
-
-
     <!--    Composing with Components-->
     <ol><todo-item
             v-for="item in groceryList"
