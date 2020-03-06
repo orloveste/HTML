@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>orloveste</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
 </head>
 
 <body>
@@ -20,6 +19,11 @@
         <merdenea-component></merdenea-component>
         {{merdenea.nume}}<br>
     </span>
+    <!--    Counter button click-->
+    <h4 class="title">Counter!</h4>
+    <h2 class="title is-1">{{ count }}</h2>
+
+
     <!--    Composing with Components-->
     <ol><todo-item
             v-for="item in groceryList"
