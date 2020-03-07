@@ -8,45 +8,26 @@
 
 <body>
 <div id="app">
-    <input v-model="merdenea.numeMerdenea">
+    {{product}}<br>
+    <input v-model="product.numeProduct" placeholder="name pruduct">
+    <input v-model="product.quantity" placeholder="enter nr">
     <br>
-    <button v-on:click="addMerdenea()"
-            @click.prevent="incrementMerdenea">Add Merdenea</button>
+    <button v-on:click="addProduct()"
+            @click.prevent="incrementProduct">Add Product</button>
     <br>
-    {{merdenele}}
+    {{listProduct}}
 
 
-    <merdenea-component v-for="vinDiesel in merdenele"
-    v-bind:baba="vinDiesel"></merdenea-component>
+    <product-component v-for="vinDiesel in listProduct"
+    v-bind:baba="vinDiesel"></product-component>
+<br>
 
-
-    {{merdenea}}<br>
-
+    {{product}}<br>
+{{message}}
     <!--    Composing with Components-->
-    <ol><todo-item
-            v-for="item in groceryList"
-            v-bind:todo="item"
-            v-bind:key="item.id"
-    ></todo-item></ol>
-<!--    Handling User Input-->
-    <p>{{message}}</p>
-    <button v-on:click="reverseMessage">Reverse Message</button>
 
-    <br>{{message}}<br>
-    <br>
-    <span v-bind:title="message">
-        If you want to see more info about that text,<br>
-        just be here! You can link aditional info about your content.<br>
-    </span>
-    Go visible =><span v-if="seen">Go visible<br></span>
-    Go INvisible =><span v-if="unseen">Go INvisible</span>
-<!--    v-for directive can be used for displaying a list of items using the
-data from an Array-->
-    <ol>
-        <li v-for="todo in todos">
-            {{todo.text}}
-        </li>
-    </ol>
+
+
 </div>
 
 </body>
