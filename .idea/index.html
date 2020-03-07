@@ -23,6 +23,22 @@
 
     {{product}}<br>
 
+    <table id="firstTable">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nume</th>
+            <th>Cantitate</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="vinDiesel in listProduct">
+            <td>{{vinDiesel.id}}</td>
+            <td>{{vinDiesel.nume}}</td>
+            <td>{{vinDiesel.cantitate}}</td>
+        </tr>
+        </tbody>
+    </table>
 {{message}}
 
 </div>
