@@ -16,7 +16,10 @@
     {{merdenele}}
 
 
-    <merdenea-component v-for="merdenea in merdenele"></merdenea-component>
+    <merdenea-component v-for="vinDiesel in merdenele"
+    v-bind:merdenea="vinDiesel"></merdenea-component>
+
+
     {{merdenea}}<br>
 
     <!--    Composing with Components-->
