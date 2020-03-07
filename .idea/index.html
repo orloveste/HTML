@@ -14,11 +14,11 @@
             @click.prevent="incrementMerdenea">Add Merdenea</button>
     <br>
     {{merdenele}}
-    <span v-for="merdenea in merdenele">
 
-        <merdenea-component></merdenea-component>
-        {{merdenea.nume}}<br>
-    </span>
+
+    <merdenea-component v-for="merdenea in merdenele"></merdenea-component>
+    {{merdenea}}<br>
+
     <!--    Composing with Components-->
     <ol><todo-item
             v-for="item in groceryList"
