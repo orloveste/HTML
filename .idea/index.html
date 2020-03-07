@@ -12,8 +12,7 @@
     <input v-model="product.numeProduct" placeholder="name pruduct">
     <input v-model="product.quantity" placeholder="enter nr">
     <br>
-    <button v-on:click="addProduct()"
-            @click.prevent="incrementProduct">Add Product</button>
+    <button v-on:click="addProduct()">Add Product</button>
     <br>
     {{listProduct}}
 
@@ -23,10 +22,8 @@
 <br>
 
     {{product}}<br>
+
 {{message}}
-    <!--    Composing with Components-->
-
-
 
 </div>
 
