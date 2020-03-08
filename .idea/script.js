@@ -1,31 +1,14 @@
-Vue.component('productComponent', {
-    props: ['baba'],
-    template: '<li> {{baba.id}} - {{baba.nume}}, {{baba.cantitate}} piece</li>',//numele merdenelei de intrat aici din input
-})
-
 var app = new Vue({
     el: '#app',
-
-    data: {
-        product: {
-            idProduct: 0,
-            numeProduct: '',
-            quantity:''
-        },
-        listProduct: [],
-
-        message: 'You loaded this page on ' + new Date().toLocaleString(),
+    data () {
+        return{
+            info: null
+        }
     },
-    methods :{
-        addProduct : function () {
-            this.listProduct.push(
-                {id: this.product.idProduct +=1,
-                nume: this.product.numeProduct,
-                cantitate: this.product.quantity}
-            );
-             this.product.numeProduct=''; //reset input
-             this.product.quantity=''; //reset input
-        },
+    mounted () {
+        axios
+            .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(response => (this.info = response))
     }
-});
+})
 

@@ -8,42 +8,11 @@
 
 <body>
 <div id="app">
-    {{product}}<br>
-    <input v-model="product.numeProduct" placeholder="name pruduct">
-    <input v-model="product.quantity" placeholder="enter nr">
-    <br>
-    <button v-on:click="addProduct()">Add Product</button>
-    <br>
-    {{listProduct}}
-
-
-    <product-component v-for="vinDiesel in listProduct"
-    v-bind:baba="vinDiesel"></product-component>
-<br>
-
-    {{product}}<br>
-
-    <table id="firstTable">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nume</th>
-            <th>Cantitate</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="vinDiesel in listProduct">
-            <td>{{vinDiesel.id}}</td>
-            <td>{{vinDiesel.nume}}</td>
-            <td>{{vinDiesel.cantitate}}</td>
-        </tr>
-        </tbody>
-    </table>
-{{message}}
-
+{{info}}
 </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="script.js"></script>
 </html>
