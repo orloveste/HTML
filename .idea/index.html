@@ -8,7 +8,18 @@
 
 <body>
 <div id="app">
-{{info}}
+    {{info}}<br>
+    {{update}}<br>
+    {{usdCode}}: {{usdRate}} <br>
+    {{euroCode}}: {{euroRate}}
+<!--    <div v-for="currency in info"-->
+<!--    class="currency">-->
+<!--        {{currency.description}}-->
+<!--        <span class="lighten">-->
+<!--             <span v-html="currency.symbol"></span>{{ currency.rate_float}}-->
+<!--        </span>-->
+<!--    </div><br>-->
+
 </div>
 
 </body>
