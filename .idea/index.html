@@ -9,12 +9,17 @@
 <body>
 <div id="app">
     {{info}}<br>
-    {{update}}<br>
-    {{usdCode}}: {{usdRate}} <br>
-    {{euroCode}}: {{euroRate}}<br>
+    Updated: {{update}}<br>
+    Rate: {{usdCode}}: {{usdRate}} <br>
+    Rate: {{euroCode}}: {{euroRate}}<br>
     StatusCode: {{statusCode}}<br>
-    {{usdCode}} Rate : {{usdRate}} <span v-html="usdSymbol"></span><br>
-    {{euroCode}} Rate : {{euroRate}} <span v-html="euroSymbol"></span><br>
+    <span v-for="currency in listCurrency">
+        {{currency.code}} Rate : {{currency.rate}}
+        <span v-html="currency.symbol"></span>
+    </span><br>
+
+<!--    {{usdCode}} Rate : {{usdRate}} <span v-html="usdSymbol"></span><br>-->
+<!--    {{euroCode}} Rate : {{euroRate}} <span v-html="euroSymbol"></span><br>-->
 
 
 
