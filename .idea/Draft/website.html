@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage title</title>
+
+    <style> /*css*/
+        .sr-only {
+            position: absolute;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            top: auto;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -36,6 +47,23 @@
 <main>
     <div> - groups content
         <section> - groups related content
+            <figure>
+                <p>Hidden table</p>
+                <br />
+                <figcaption>Pause</figcaption>
+            </figure>
+            <table class="sr-only">
+                <caption>Hours of Weekly acces</caption>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Stealth &amp; Agility</th>
+                    <th scope="col">Combat</th>
+                    <th scope="col">Weapons</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+            </table>
             <article> - groups independent, self-contained content</article>
         </section>
     </div>
