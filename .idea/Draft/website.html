@@ -7,16 +7,24 @@
     <style> /*css*/
     body {
         color: hsl(0, 55%, 15%);
-        background-color: hsl(0202, 25%, 55%);
+        background-color: hsl(0202, 35%, 85%);
     }
-        .sr-only {
-            position: absolute;
-            left: -10000px;
-            width: 1px;
-            height: 1px;
-            top: auto;
-            overflow: hidden;
-        }
+    .sr-only {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        top: auto;
+        overflow: hidden;
+    }
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        width: 220px;
+    }
     </style>
 </head>
 <body>
@@ -70,6 +78,9 @@
             </table>
             <article> - groups independent, self-contained content</article>
         </section>
+
+        <img class="responsive-img" src="https://upload.wikimedia.org/wikipedia/en/3/3f/Woody_Woodpecker.png" alt="responsive img">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Woody_Woodpecker.png" alt="non-responsive img">
     </div>
 </main>
 
