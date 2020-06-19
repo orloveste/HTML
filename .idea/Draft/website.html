@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage title</title>
+
+    <style> /*css*/
+    #box-container {
+        background: gray;
+        display: grid;
+        height: 110px;
+        justify-content: space-evenly;
+        flex-wrap: wrap; /*img - out of context*/
+    }
+    body {
+        color: hsl(0, 55%, 15%);
+        background-color: hsl(0202, 35%, 85%);
+    }
+    .sr-only {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        top: auto;
+        overflow: hidden;
+    }
+    .responsive-img {
+        max-width: 80%; /*220px*/
+        height: auto;
+        align-items: center;
+    }
+
+    img {
+        width: 110px;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1 align="center">homepage owner</h1>
+    <nav>
+        <ul>
+            <li><a href="https://www.scrum.org/open-assessments">Learn Agile Scrum</a></li>
+            <li><a href="https://hyperskill.org/profile/8765888">Learn Java with JetBrains</a></li>
+            <li><a href="https://www.freecodecamp.org/fcc0eb43b07-6bff-4c31-bc46-e329db162fa5">Learn WEB</a></li>
+        </ul>
+    </nav>
+</header>
+
+<form>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <fieldset>
+        <legend>How we can help you?</legend>
+        <input id="client" type="radio" name="categoryContact" value="client">
+        <label for="client">I am a Client.</label><br>
+        <input id="contractant authority" type="radio" name="categoryContact" value="contractant authority">
+        <label for="contractant authority">I am a Contractant Authority.</label><br>
+        <input id="curiosity" type="radio" name="categoryContact" value="curiosity">
+        <label for="curiosity">I am curious.</label>
+    </fieldset>
+
+    <input type="submit" name="submit" value="Submit">
+</form>
+<br>
+<main>
+    <div> - groups content
+        <section> - groups related content
+            <figure>
+                <p>Hidden table</p>
+                <br />
+                <figcaption>Pause</figcaption>
+            </figure>
+            <table class="sr-only">
+                <caption>Hours of Weekly acces</caption>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th scope="col">Stealth &amp; Agility</th>
+                    <th scope="col">Combat</th>
+                    <th scope="col">Weapons</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+            </table>
+            <article> - groups independent, self-contained content</article>
+        </section>
+    </div>
+<div id="box-container">
+    <img class="responsive-img" src="https://upload.wikimedia.org/wikipedia/en/3/3f/Woody_Woodpecker.png" alt="responsive img">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Woody_Woodpecker.png" alt="non-responsive img">
+
+</div>
+
+</main>
+
+
+
+
+
+
+<footer>
+    <h5>Copyright? = &copy; 2020 <a href="https://github.com/orloveste">Eugeniu Orlov</a></h5>
+</footer>
+</body>
+</html>
