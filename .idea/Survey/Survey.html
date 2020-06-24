@@ -3,24 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Survey</title>
+    <style src="style.css"></style>
 </head>
 <body>
 <header>
-    <h1 id="title">Feedback survey form</h1>
-    <p id="description">Your opinion about our services is very important for
-        the improvement of the future experience.</p>
+    <h1 id="title" class="text-center">Feedback survey form</h1>
+    <p id="description" class="text-center">Your opinion about our services are very important for the improvement of the future experience.
+    </p>
 </header>
 
 <form id="survey-form">
-    <label id="name">Name</label>
-    <input type="text" name="name" id="name" class="form-control"
-            placeholder="Enter your name" required/><br>
+    <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+        /><br>
+    </div>
+    <div class="form-group">
+        <label id="email-label" for="email">E-mail</label>
+        <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your Email"
+                required/><br>
+        <div class="form-group">
+            <label id="number-label" for="number">Number</label>
+            <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    min ="2"
+                    max ="99"
+                    class="form-control"
+                    placeholder="Enter Number"
+                    required
+            /><br>
+        </div>
+        <div>
+            <select id="dropdown">
+                <option>first option
+                </option>
+                <option>second option
+                </option>
+            </select>
+        </div>
+        <div>
+            <input
+                    name="user-recommend"
+                    value="true"
+                    type="radio"
+                    class="input-radio"
+                    checked
+            />True
+            <input
+                    name="user-recommend"
+                    value="false"
+                    type="radio"
+                    class="input-radio"
+                    checked
+            />False
+        </div>
 
-    <label id="e-maill">E-mail</label>
-    <input type="text" name="e-mail" id="e-mail" class="form-control"
-           placeholder="Enter your e-mail" required/><br>
 
-
+    </div>
 </form>
 </body>
 </html>
@@ -32,25 +84,25 @@ done
 User Story #3: I can see a form with id="survey-form".
 done
 User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
-
+done
 User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
-
+done
 User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
-
+done
 User Story #7: Inside the form, I can enter a number in a field with id="number".
-
+done
 User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
-
+done
 User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
-
+done
 User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
-
+done
 User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
-
+done
 User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
-
+done
 User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
-
+done
 User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
 
 User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
