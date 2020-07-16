@@ -3,25 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>
-    <h1 id="title">Feedback survey form</h1>
-    <p id="description">Your opinion about our services is very important for
-        the improvement of the future experience.</p>
-</header>
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Feedback survey form</h1>
+        <p id="description" class="text-center">Your opinion about our services are very important for the improvement of the future experience.
+        </p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+            />
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">E-mail</label>
+            <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your Email"
+                    required
+            />
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Number<span class="clue">(optional from 2 to 99)</span></label>
+            <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    min ="2"
+                    max ="99"
+                    class="form-control"
+                    placeholder="Enter your Number"
+            />
+        </div>
+        <div class="form-group">
+            <p>Would you recommend our services to someone?</p>
+            <select id="dropdown" name="option" class="form-control" required>
+                <option disable selected value>Select an option</option>
+                <option value="definitely">Definitely</option>
+                <option value="maybe">Maybe</option>
+                <option value="not-sure">Not sure</option>
 
-<form id="survey-form">
-    <label id="name">Name</label>
-    <input type="text" name="name" id="name" class="form-control"
-            placeholder="Enter your name" required/><br>
+            </select>
 
-    <label id="e-maill">E-mail</label>
-    <input type="text" name="e-mail" id="e-mail" class="form-control"
-           placeholder="Enter your e-mail" required/><br>
+            <label>
+                <input
+                        name="user-recommend"
+                        value="definitely"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                />Definitely</label
+            >
+            <label>
+                <input
+                        name="user-recommend"
+                        value="maybe"
+                        type="radio"
+                        class="input-radio"
+                />Maybe</label
+            >
 
-
-</form>
+            <label
+            ><input
+                    name="user-recommend"
+                    value="not-sure"
+                    type="radio"
+                    class="input-radio"
+            />Not sure</label
+            >
+        </div>
+    </form>
+</div>
 </body>
 </html>
 <!--
